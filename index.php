@@ -1,8 +1,12 @@
-<?
-    /*
-        Проверить запрос на соответствие полей и заменить путь изображения для точек
-    */
-?>
+<? /* Проверить запрос на соответствие полей и заменить путь изображения для точек */ ?>
+<script>
+    if ((!document.querySelector('[src="https://api-maps.yandex.ru/2.1/?apikey=b45c587d-d157-4b1d-86d4-acefbe12350c&lang=ru_RU"]')) && (document.querySelector('#map-1'))) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://api-maps.yandex.ru/2.1/?apikey=556a806a-b239-476a-9342-caefdcba1c9d&lang=ru_RU';
+        document.head.appendChild(script);
+    }
+</script>
 <section class="maps">
     <div class="maps__container container">
         <div class="maps__row">
